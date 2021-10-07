@@ -98,7 +98,7 @@ export default function Transfer() {
               <div>
                 <div className="px-4 py-5 sm:p-6">
                   <dd className="mt-1 flex justify-between items-baseline md:block lg:flex">
-                    <div className="flex items-baseline text-2xl font-semibold text-indigo-300">
+                    <div className="flex items-baseline text-2xl font-semibold text-gray-300">
                       {formatAmount(balances.celo, 2)}{' '}
                       <span className="text-sm text-gray-400 ml-2">CELO</span>
                     </div>
@@ -108,7 +108,7 @@ export default function Transfer() {
               <div>
                 <div className="px-4 py-5 sm:p-6">
                   <dd className="mt-1 flex justify-between items-baseline md:block lg:flex">
-                    <div className="flex items-baseline text-2xl font-semibold text-indigo-300">
+                    <div className="flex items-baseline text-2xl font-semibold text-gray-300">
                       {formatAmount(balances.cusd, 2)}
                       <span className="text-sm text-gray-400 ml-2">cUSD</span>
                     </div>
@@ -118,7 +118,7 @@ export default function Transfer() {
               <div>
                 <div className="px-4 py-5 sm:p-6">
                   <dd className="mt-1 flex justify-between items-baseline md:block lg:flex">
-                    <div className="flex items-baseline text-2xl font-semibold text-indigo-300">
+                    <div className="flex items-baseline text-2xl font-semibold text-gray-300">
                       {formatAmount(balances.ceur, 2)}
                       <span className="text-sm text-gray-400 ml-2">cEUR</span>
                     </div>
@@ -141,8 +141,8 @@ export default function Transfer() {
                 id="price"
                 value={amount}
                 onChange={(e) => setAmount(e.target.value)}
-                // className="focus:ring-indigo-500 focus:border-indigo-500 block w-full pr-12 sm:text-sm border-gray-300 rounded-md"
-                className="w-full appearance-none block px-3 py-2 border border-gray-600 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm bg-gray-600 text-gray-300 w-20 w-64"
+                // className="focus:ring-gray-500 focus:border-gray-500 block w-full pr-12 sm:text-sm border-gray-300 rounded-md"
+                className="w-full appearance-none block px-3 py-2 border border-gray-600 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-gray-500 focus:border-gray-500 sm:text-sm bg-gray-600 text-gray-300 w-20 w-64"
                 placeholder={'0'}
               />
               <div className="absolute inset-y-0 right-0 flex items-center">
@@ -152,7 +152,7 @@ export default function Transfer() {
                 <select
                   id="currency"
                   name="currency"
-                  className="focus:ring-indigo-500 focus:border-indigo-500 h-full py-0 pl-2 pr-10 border-transparent bg-transparent text-gray-300 sm:text-sm rounded-md"
+                  className="focus:ring-gray-500 focus:border-gray-500 h-full py-0 pl-2 pr-10 border-transparent bg-transparent text-gray-300 sm:text-sm rounded-md"
                   value={currency}
                   onChange={(e) => setCurrency(e.target.value as Currencies)}
                 >
@@ -170,7 +170,7 @@ export default function Transfer() {
               placeholder="0x1234567890987654321"
               value={toAddress}
               onChange={(e) => setToAddress(e.target.value)}
-              className="appearance-none block w-full px-3 py-2 border border-gray-600 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm bg-gray-600 text-gray-300 w-20"
+              className="appearance-none block w-full px-3 py-2 border border-gray-600 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-gray-500 focus:border-gray-500 sm:text-sm bg-gray-600 text-gray-300 w-20"
             />
           </div>
 
@@ -183,7 +183,7 @@ export default function Transfer() {
 
         <button
           onClick={transfer}
-          className="ml-auto px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700"
+          className="ml-auto px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-gradient-to-r from-gray-600 to-gray-600 hover:from-gray-700 hover:to-gray-700"
         >
           Send
         </button>

@@ -362,7 +362,7 @@ export default function Earn() {
                         </div>
 
                         <div className="relative flex flex-col mt-2">
-                          <span className="inline-flex items-center rounded-md text-xs font-medium text-indigo-600">
+                          <span className="inline-flex items-center rounded-md text-xs font-medium text-gray-600">
                             {formatAmount(gv.active, 2)} ACTIVE (
                             {gv.active
                               .dividedBy(lockedSummary.lockedGold.total)
@@ -430,12 +430,12 @@ export default function Earn() {
                           id="price"
                           value={voteAmount}
                           onChange={(e) => setVoteAmount(e.target.value)}
-                          // className="focus:ring-indigo-500 focus:border-indigo-500 block w-full pr-12 sm:text-sm border-gray-300 rounded-md"
-                          className="appearance-none block pl-3 pr-16 py-2 border border-gray-600 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm bg-gray-600 text-gray-300 w-full"
+                          // className="focus:ring-gray-500 focus:border-gray-500 block w-full pr-12 sm:text-sm border-gray-300 rounded-md"
+                          className="appearance-none block pl-3 pr-16 py-2 border border-gray-600 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-gray-500 focus:border-gray-500 sm:text-sm bg-gray-600 text-gray-300 w-full"
                           placeholder={'0'}
                         />
                         <div className="absolute inset-y-0 right-0 flex items-center">
-                          <div className="flex items-center justify-center focus:ring-indigo-500 focus:border-indigo-500 h-full py-0 pl-2 pr-4 border-transparent bg-transparent text-gray-300 sm:text-sm rounded-md">
+                          <div className="flex items-center justify-center focus:ring-gray-500 focus:border-gray-500 h-full py-0 pl-2 pr-4 border-transparent bg-transparent text-gray-300 sm:text-sm rounded-md">
                             CELO
                           </div>
                         </div>

@@ -44,7 +44,7 @@ export function Dropdown({
           aria-haspopup="listbox"
           aria-expanded="true"
           aria-labelledby="listbox-label"
-          className="bg-gray-800 relative w-full border border-gray-600 rounded-md shadow-sm pl-3 pr-10 py-2 text-left cursor-default focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm h-10"
+          className="bg-gray-800 relative w-full border border-gray-600 rounded-md shadow-sm pl-3 pr-10 py-2 text-left cursor-default focus:outline-none focus:ring-1 focus:ring-gray-500 focus:border-gray-500 sm:text-sm h-10"
         >
           <span className="block truncate text-white">{selected}</span>
           <span className="absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none">
@@ -85,12 +85,12 @@ export function Dropdown({
               role="listbox"
               aria-labelledby="listbox-label"
               aria-activedescendant="listbox-item-3"
-              className="max-h-60 rounded-md py-1 text-base ring-1 ring-black ring-opacity-5 overflow-auto focus:outline-none sm:text-sm"
+              className="max-h-60 rounded-md py-1 text-base ring-1 ring-gray ring-opacity-5 overflow-auto focus:outline-none sm:text-sm"
             >
               {/* <!--
           Select option, manage highlight styles based on mouseenter/mouseleave and keyboard navigation.
 
-          Highlighted: "text-white bg-indigo-600", Not Highlighted: "text-gray-900"
+          Highlighted: "text-white bg-gray-600", Not Highlighted: "text-gray-900"
         --> */}
               {options.map((o) => (
                 <li
@@ -100,7 +100,7 @@ export function Dropdown({
                     setSelected(o);
                     setOpen(false);
                   }}
-                  className={`flex ${'hover:text-white hover:bg-indigo-600'} group cursor-default select-none relative py-2 pl-3 pr-9`}
+                  className={`flex ${'hover:text-white hover:bg-gray-600'} group cursor-default select-none relative py-2 pl-3 pr-9`}
                 >
                   {/* <!-- Selected: "font-semibold", Not Selected: "font-normal" --> */}
                   <span
@@ -113,10 +113,10 @@ export function Dropdown({
 
                   {/* <!--
                     Checkmark, only display for selected option.
-                    Highlighted: "text-white", Not Highlighted: "text-indigo-600"
+                    Highlighted: "text-white", Not Highlighted: "text-gray-600"
                   --> */}
                   {selected === o && (
-                    <span className="text-indigo-800 group-hover:text-white absolute inset-y-0 right-0 flex items-center pr-4">
+                    <span className="text-gray-800 group-hover:text-white absolute inset-y-0 right-0 flex items-center pr-4">
                       {/* <!-- Heroicon name: check --> */}
                       <svg
                         className="h-5 w-5"
@@ -206,7 +206,7 @@ export function DropButton({
       <div className="relative">
         {open && (
           <div
-            className="z-50 origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-gray-700 ring-1 ring-black ring-opacity-5 divide-y divide-gray-100"
+            className="z-50 origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-gray-700 ring-1 ring-gray ring-opacity-5 divide-y divide-gray-100"
             role="menu"
             aria-orientation="vertical"
             aria-labelledby="options-menu"

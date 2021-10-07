@@ -45,7 +45,7 @@ export function Sidebar({
                 {item.name}
 
                 {item.disabled && (
-                  <span className="text-xs font-medium ml-2 text-purple-500">
+                  <span className="text-xs font-medium ml-2 text-gray-500">
                     SOON
                   </span>
                 )}
@@ -267,11 +267,11 @@ export function WithAppLayout({ children }) {
             ref={menuRef}
             className="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden"
           >
-            <div className="relative rounded-lg shadow-md bg-gray-900 ring-1 ring-black ring-opacity-5 overflow-hidden">
+            <div className="relative rounded-lg shadow-md bg-gray-900 ring-1 ring-gray ring-opacity-5 overflow-hidden">
               <button
                 type="button"
                 onClick={() => setMenu(false)}
-                className="absolute right-2 top-2 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+                className="absolute right-2 top-2 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gray-500"
               >
                 <span className="sr-only">Close menu</span>
                 {/* Heroicon name: outline/x */}
@@ -298,14 +298,14 @@ export function WithAppLayout({ children }) {
                       className={`flex items-center space-x-3 px-3 py-2 rounded-md text-base font-medium ${
                         (t.strict && router.asPath === t.link) ||
                         (!t.strict && router.asPath.startsWith(t.link))
-                          ? 'text-indigo-600'
+                          ? 'text-gray-600'
                           : `text-gray-300`
                       }`}
                     >
                       <span>{t.icon}</span>
                       <span>{t.name}</span>
                       {t.disabled && (
-                        <span className="font-medium text-xs text-indigo-500">
+                        <span className="font-medium text-xs text-gray-500">
                           COMING SOON
                         </span>
                       )}
@@ -367,7 +367,7 @@ export function WithAppLayout({ children }) {
                 <button
                   type="button"
                   onClick={() => setMenu(true)}
-                  className="md:hidden rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+                  className="md:hidden rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gray-500"
                   aria-expanded="false"
                 >
                   <span className="sr-only">Open main menu</span>

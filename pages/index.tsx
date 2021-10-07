@@ -82,7 +82,7 @@ export default function General() {
                     <input
                       id="name"
                       name="name"
-                      className="appearance-none block w-full px-3 py-2 border border-gray-600 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm bg-gray-600 text-gray-300 w-20"
+                      className="appearance-none block w-full px-3 py-2 border border-gray-600 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-gray-500 focus:border-gray-500 sm:text-sm bg-gray-600 text-gray-300 w-20"
                       placeholder="John Doe"
                       value={state.name}
                       onChange={(e) => changeProperty('name', e.target.value)}
@@ -101,7 +101,7 @@ export default function General() {
                     <input
                       id="metadataURL"
                       name="metadataURL"
-                      className="appearance-none block w-full px-3 py-2 border border-gray-600 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm bg-gray-600 text-gray-300 w-20"
+                      className="appearance-none block w-full px-3 py-2 border border-gray-600 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-gray-500 focus:border-gray-500 sm:text-sm bg-gray-600 text-gray-300 w-20"
                       placeholder="https://example.com/metadata.json"
                       value={state.metadataURL}
                       onChange={(e) =>
@@ -118,7 +118,7 @@ export default function General() {
         <button
           onClick={save}
           disabled={saving}
-          className="ml-auto px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700"
+          className="ml-auto px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-gradient-to-r from-gray-600 to-gray-600 hover:from-gray-700 hover:to-gray-700"
         >
           {saving ? (
             <Loader type="TailSpin" height={24} width={24} color="white" />
@@ -151,95 +151,11 @@ export default function General() {
                   <input
                     id="name"
                     name="name"
-                    className="appearance-none block w-full px-3 py-2 border border-gray-600 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm bg-gray-600 text-gray-300 w-20"
+                    className="appearance-none block w-full px-3 py-2 border border-gray-600 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-gray-500 focus:border-gray-500 sm:text-sm bg-gray-600 text-gray-300 w-20"
                     readOnly
                     value={accountSummary?.address}
                   />
                   <CopyText text={accountSummary?.address} />
-                </div>
-              </div>
-
-              <div>
-                <label
-                  htmlFor="name"
-                  className="block text-sm font-medium text-gray-300"
-                >
-                  Wallet address
-                </label>
-                <div className="mt-1 flex items-center space-x-3">
-                  <input
-                    id="name"
-                    name="name"
-                    className="appearance-none block w-full px-3 py-2 border border-gray-600 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm bg-gray-600 text-gray-300 w-20"
-                    placeholder="No wallet address set"
-                    readOnly
-                    value={accountSummary.wallet}
-                  />
-                  <CopyText text={accountSummary.wallet} />
-                </div>
-              </div>
-
-              <div>
-                <label
-                  htmlFor="name"
-                  className="block text-sm font-medium text-gray-300"
-                >
-                  Vote signer
-                </label>
-                <div className="mt-1 flex items-center space-x-3">
-                  <input
-                    id="name"
-                    name="name"
-                    className="appearance-none block w-full px-3 py-2 border border-gray-600 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm bg-gray-600 text-gray-300 w-20"
-                    placeholder="No vote signing key set"
-                    readOnly
-                    value={accountSummary.authorizedSigners.attestation}
-                  />
-                  <CopyText
-                    text={accountSummary.authorizedSigners.attestation}
-                  />
-                </div>
-              </div>
-
-              <div>
-                <label
-                  htmlFor="name"
-                  className="block text-sm font-medium text-gray-300"
-                >
-                  Attestation signer
-                </label>
-                <div className="mt-1 flex items-center space-x-3">
-                  <input
-                    id="name"
-                    name="name"
-                    className="appearance-none block w-full px-3 py-2 border border-gray-600 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm bg-gray-600 text-gray-300 w-20"
-                    placeholder="No attestation signing key set"
-                    readOnly
-                    value={accountSummary.authorizedSigners.attestation}
-                  />
-                  <CopyText
-                    text={accountSummary.authorizedSigners.attestation}
-                  />
-                </div>
-              </div>
-
-              <div>
-                <label
-                  htmlFor="name"
-                  className="block text-sm font-medium text-gray-300"
-                >
-                  Validator signer
-                </label>
-                <div className="mt-1 flex items-center space-x-3">
-                  <input
-                    id="name"
-                    name="name"
-                    className="appearance-none block w-full px-3 py-2 border border-gray-600 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm bg-gray-600 text-gray-300 w-20"
-                    placeholder="No validator signing key set"
-                    readOnly
-                    value={accountSummary.authorizedSigners.validator}
-                  />
-                  <CopyText text={accountSummary.authorizedSigners.validator} />
                 </div>
               </div>
             </div>

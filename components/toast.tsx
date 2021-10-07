@@ -74,7 +74,7 @@ const ToastComponent = ({
       <div className="ml-4 flex-shrink-0 flex">
         <button
           onClick={onDismiss}
-          className="rounded-md inline-flex text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+          className="rounded-md inline-flex text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500"
         >
           <span className="sr-only">Close</span>
           {/* <!-- Heroicon name: x --> */}
