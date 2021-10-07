@@ -102,7 +102,7 @@ const tabs = [
     link: '/earn',
   },
   {
-    name: 'Vote',
+    name: 'Trade',
     icon: (
       <svg
         className="h-4"
@@ -119,7 +119,7 @@ const tabs = [
         />
       </svg>
     ),
-    link: '/vote',
+    link: '/trade',
   },
   {
     name: 'Transfer',
@@ -142,7 +142,7 @@ const tabs = [
     link: '/transfer',
   },
   {
-    name: 'Lend',
+    name: 'Mint',
     icon: (
       <svg
         className="h-4"
@@ -159,11 +159,11 @@ const tabs = [
         />
       </svg>
     ),
-    link: '/lend',
-    disabled: true,
+    link: '/mint',
+    disabled: false,
   },
   {
-    name: 'Swap',
+    name: 'Burn',
     icon: (
       <svg
         className="h-4"
@@ -180,8 +180,8 @@ const tabs = [
         />
       </svg>
     ),
-    link: '/swap',
-    disabled: true,
+    link: '/burn',
+    disabled: false,
   },
 ];
 
