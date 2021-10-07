@@ -14,6 +14,7 @@ enum Currencies {
   CELO = 'CELO',
   cUSD = 'cUSD',
   cEUR = 'cEUR',
+  cETB = 'cETB',
 }
 
 const transferQuery = gql`
@@ -54,6 +55,9 @@ export default function Transfer() {
     if (currency === Currencies.CELO) {
       contract = await kit.contracts.getGoldToken();
     } else if (currency === Currencies.cUSD) {
+      contract = await kit.contracts.getStableToken();
+    } else if (currency === Currencies.cETB) {
+      // Fetch cETB Contract here
       contract = await kit.contracts.getStableToken();
     } else {
       throw new Error('Unsupported currency');
@@ -121,6 +125,16 @@ export default function Transfer() {
                     <div className="flex items-baseline text-2xl font-semibold text-gray-300">
                       {formatAmount(balances.ceur, 2)}
                       <span className="text-sm text-gray-400 ml-2">cEUR</span>
+                    </div>
+                  </dd>
+                </div>
+              </div>
+              <div>
+                <div className="px-4 py-5 sm:p-6">
+                  <dd className="mt-1 flex justify-between items-baseline md:block lg:flex">
+                    <div className="flex items-baseline text-2xl font-semibold text-gray-300">
+                      {formatAmount(balances.ceur, 2)}
+                      <span className="text-sm text-gray-400 ml-2">cETB</span>
                     </div>
                   </dd>
                 </div>
