@@ -1,8 +1,4 @@
 # Commands to start on workspace startup
 tasks:
   - init: yarn install
-    command: yarn dev
-# Ports to expose on workspace startup
-ports:
-  - port: 3000
-    onOpen: open-preview
+    command: npx browserslist@latest --update-db && yarn dev
