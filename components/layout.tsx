@@ -424,13 +424,13 @@ export function WithAppLayout({ children }) {
             <div className="flex items-center">
               <Image src="/logo.png" height="24px" width="24px" />
               <p className="text-center text-base font-medium text-gray-300 ml-2">
-                CeloTools
+                Santym Stablecoin Exchange
               </p>
             </div>
           </div>
           <div className="flex items-center space-x-6">
             <a
-              href="https://github.com/alexbharley/celo-manager"
+              href="https://github.com/Santym-Inc"
               target="_blank"
               className="text-gray-400 hover:text-gray-500"
             >
@@ -449,7 +449,7 @@ export function WithAppLayout({ children }) {
               </svg>
             </a>
             <a
-              href="https://twitter.com/"
+              href="https://twitter.com/TwittSantym"
               target="_blank"
               className="text-gray-400 hover:text-gray-500"
             >
