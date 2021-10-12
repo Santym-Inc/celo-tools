@@ -11,10 +11,10 @@ import Web3 from 'web3';
 import { Base } from 'state';
 
 enum Currencies {
-  CELO = 'CELO',
+  cETB = 'cETB',
   cUSD = 'cUSD',
   cEUR = 'cEUR',
-  cETB = 'cETB',
+  CELO = 'CELO',
 }
 
 const transferQuery = gql`
@@ -47,7 +47,7 @@ export default function Transfer() {
     }
   );
   const [amount, setAmount] = useState('0');
-  const [currency, setCurrency] = useState(Currencies.CELO);
+  const [currency, setCurrency] = useState(Currencies.cETB);
   const [toAddress, setToAddress] = useState('');
 
   const transfer = useCallback(async () => {
@@ -103,8 +103,8 @@ export default function Transfer() {
                 <div className="px-4 py-5 sm:p-6">
                   <dd className="mt-1 flex justify-between items-baseline md:block lg:flex">
                     <div className="flex items-baseline text-2xl font-semibold text-gray-300">
-                      {formatAmount(balances.celo, 2)}{' '}
-                      <span className="text-sm text-gray-400 ml-2">CELO</span>
+                      {formatAmount(balances.ceur, 2)}
+                      <span className="text-sm text-gray-400 ml-2">cETB</span>
                     </div>
                   </dd>
                 </div>
@@ -125,16 +125,6 @@ export default function Transfer() {
                     <div className="flex items-baseline text-2xl font-semibold text-gray-300">
                       {formatAmount(balances.ceur, 2)}
                       <span className="text-sm text-gray-400 ml-2">cEUR</span>
-                    </div>
-                  </dd>
-                </div>
-              </div>
-              <div>
-                <div className="px-4 py-5 sm:p-6">
-                  <dd className="mt-1 flex justify-between items-baseline md:block lg:flex">
-                    <div className="flex items-baseline text-2xl font-semibold text-gray-300">
-                      {formatAmount(balances.ceur, 2)}
-                      <span className="text-sm text-gray-400 ml-2">cETB</span>
                     </div>
                   </dd>
                 </div>
