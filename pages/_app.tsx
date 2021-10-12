@@ -20,20 +20,20 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <title>CeloTools</title>
+        <title>Santym Stablecoin Exchange</title>
         <link rel="icon" href="/favicon.ico" />
 
         {process.browser && (
           <script
             async
             defer
-            data-domain="celotools.com"
+            data-domain="ssx.com"
             src="https://stats.celotools.com/js/index.js"
           />
         )}
       </Head>
 
-      <ContractKitProvider dappName="CeloTools">
+      <ContractKitProvider dappName="SantymStablecoinExchange">
         <Base.Provider>
           <BaseComponent>
             <WithSidebar>
