@@ -89,27 +89,6 @@ export default function General() {
                     />
                   </div>
                 </div>
-
-                <div>
-                  <label
-                    htmlFor="metadataURL"
-                    className="block text-sm font-medium text-gray-300"
-                  >
-                    Metadata URL
-                  </label>
-                  <div className="mt-1">
-                    <input
-                      id="metadataURL"
-                      name="metadataURL"
-                      className="appearance-none block w-full px-3 py-2 border border-gray-600 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-gray-500 focus:border-gray-500 sm:text-sm bg-gray-600 text-gray-300 w-20"
-                      placeholder="https://example.com/metadata.json"
-                      value={state.metadataURL}
-                      onChange={(e) =>
-                        changeProperty('metadataURL', e.target.value)
-                      }
-                    />
-                  </div>
-                </div>
               </div>
             </div>
           </div>
